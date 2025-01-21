@@ -11,11 +11,13 @@ This Python script fetches captions (subtitles) for YouTube videos, including bo
 
 ## Prerequisites
 
-Ensure you have Python 3.9 or later installed. You also need to install the following required dependencies.
+Ensure you have Python 3.9 or later installed. Set up the Python environment. You also need to install the required dependencies.
 
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
-```
+```plaintext
 
 ## How to Use
 
@@ -36,8 +38,9 @@ pip install -r requirements.txt
    Enter YouTube video URLs or IDs (comma-separated):
    https://www.youtube.com/watch?v=abc123, xyz456
    ```
+
    IMPORTANT - shortened youtube URLs will not work:
-   https://youtu.be/abc123
+   <https://youtu.be/abc123>
 
 4. **Output**
    The script will:
