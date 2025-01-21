@@ -15,9 +15,8 @@ Ensure you have Python 3.9 or later installed. Set up the Python environment. Yo
 
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate
 pip install -r requirements.txt
-```plaintext
+```
 
 ## How to Use
 
@@ -34,7 +33,7 @@ pip install -r requirements.txt
 3. **Provide Input**
    When prompted, enter a comma-separated list of YouTube video URLs or IDs:
 
-   ```
+   ```md
    Enter YouTube video URLs or IDs (comma-separated):
    https://www.youtube.com/watch?v=abc123, xyz456
    ```
