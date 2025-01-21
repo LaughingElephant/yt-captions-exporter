@@ -7,18 +7,14 @@ This Python script fetches captions (subtitles) for YouTube videos, including bo
 - Fetch captions from YouTube videos (manual or auto-generated).
 - Accepts a list of video URLs or IDs as input.
 - Saves captions to a `captions` directory with each file named after the video ID.
-- Handles errors gracefully for videos without captions or disabled captions.
+- Handles errors for videos without captions or disabled captions.
 
 ## Prerequisites
 
-Ensure you have Python 3.9 or later installed. You also need to install the following Python libraries:
-
-- [`youtube-transcript-api`](https://pypi.org/project/youtube-transcript-api/)
-
-To install the required library, run:
+Ensure you have Python 3.9 or later installed. You also need to install the following required dependencies.
 
 ```bash
-pip install youtube-transcript-api
+pip install -r requirements.txt
 ```
 
 ## How to Use
