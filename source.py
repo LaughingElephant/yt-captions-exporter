@@ -13,12 +13,16 @@ def fetch_captions(video_ids):
 
             # Fetch transcript
             try:
-                transcript = YouTubeTranscriptApi.get_transcript(video_id)
-                print("Manual captions found.")
+                transcript_list = YouTubeTranscriptApi.list_transcripts(video_id)
+                try:
+                    transcript = transcript_list.find_manually_created_transcript(['en']).fetch()
+                    print("Manual captions found.")
+                except NoTranscriptFound:             
+                    print("No manual captions found. Trying auto-generated captions...")
+                    transcript = transcript_list.find_generated_transcript(['en']).fetch()
             except NoTranscriptFound:
-                print("No manual captions found. Trying auto-generated captions...")
-                transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['en'])
-            
+                print("No captions available (manual or auto-generated).")
+                continue            
             # Convert transcript to plain text
             captions = "\n".join([item['text'] for item in transcript])
 

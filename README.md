@@ -1,6 +1,6 @@
 # YouTube Captions Downloader
 
-This Python script fetches captions (subtitles) for YouTube videos, including both manually uploaded and auto-generated captions. It supports multiple video URLs or IDs, and saves the captions as `.txt` files for each video.
+This Python script fetches captions (subtitles) for YouTube videos, including both manually uploaded and auto-generated captions. It supports multiple video URLs or IDs, and saves the captions as `.txt` files in captions folder for each video.
 
 ## Features
 
@@ -27,7 +27,7 @@ pip install -r requirements.txt
    Execute the script from the command line:
 
    ```bash
-   python youtube_captions_downloader.py
+   python source.py
    ```
 
 3. **Provide Input**
